@@ -18,7 +18,7 @@ btn.addEventListener("click", function(e) {
         errorSpan.innerHTML = "";
         errorSpan.innerText = "User not found! Do you want to create a new account?";
         let signupLink = document.createElement("a");
-        signupLink.href = "Signup.html";
+        signupLink.href = "signup.html";
         signupLink.innerText = " Sign up";
         errorSpan.appendChild(document.createElement("br"));
         errorSpan.appendChild(signupLink);
