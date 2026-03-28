@@ -18,7 +18,7 @@ if (currentUser) {
 
 document.getElementById("logoutBtn").addEventListener("click", function() {
     localStorage.removeItem("currentUser");
-    location.href = "Login.html";
+    location.href = "login.html";
 });
 
 let allProducts = [];
