@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #f4f4f4;
+            font-family: 'Segoe UI', sans-serif;
+            padding: 40px 20px;
+        }
+
+        #detailsContainer {
+            max-width: 700px;
+            margin: 0 auto 20px;
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 28px;
+            align-items: flex-start;
+        }
+
+        #detailsContainer img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 12px;
+            flex-shrink: 0;
+        }
+
+        .info { display: flex; flex-direction: column; gap: 12px; }
+        .info h2 { font-size: 20px; color: #1a1a2e; }
+        .info .price { font-size: 24px; font-weight: bold; color: #28a745; }
+        .info p { font-size: 14px; color: #666; line-height: 1.7; }
+
+        body.dark {
+            background: #0f0f0f;
+            color: white;
+        }
+        body.dark #detailsContainer {
+            background: #1e1e1e;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+        body.dark .info h2 { color: white; }
+        body.dark .info p  { color: #aaa; }
+
+        #backBtn {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 32px;
+            background: linear-gradient(135deg, #f5c542, #e6b422);
+            color: #1a1a2e;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        #backBtn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(245,197,66,0.4);
+        }
+    </style>
+</head>
+<body>
+    <div id="detailsContainer"></div>
+<button id="backBtn" onclick="history.back()">Back</button>
+<script src="Details.js"></script>
+</body>
+</html>

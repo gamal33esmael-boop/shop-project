@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .Form-container {
+        background: white;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        width: 350px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .Form-container h2 {
+        font-size: 1.8rem;
+        color: #1a1a2e;
+    }
+
+    .Form-container input {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border: 2px solid #e0e0e0;
+        border-radius: 0.75rem;
+        font-size: 1rem;
+        outline: none;
+        transition: all 0.3s ease;
+        background: #f9f9f9;
+    }
+
+    .Form-container input:focus {
+        border-color: #f5c542;
+        background: white;
+        box-shadow: 0 0 0 3px rgba(245, 197, 66, 0.2);
+    }
+
+    .Form-container button {
+        width: 100%;
+        padding: 0.8rem;
+        background: linear-gradient(135deg, #f5c542 0%, #e6b422 100%);
+        color: #1a1a2e;
+        border: none;
+        border-radius: 0.75rem;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .Form-container button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(245, 197, 66, 0.4);
+    }
+
+    .Form-container a {
+        color: #f5c542;
+        text-decoration: none;
+    }
+
+    body.dark {
+        background: #0f0f0f !important;
+    }
+    body.dark .Form-container {
+        background: #1e1e1e;
+        color: white;
+    }
+    body.dark .Form-container input {
+        background: #2a2a2a;
+        border-color: #444;
+        color: white;
+    }
+    body.dark .Form-container h2 {
+        color: white;
+    }
+
+    #loginError {
+        color: red;
+        font-size: 0.85rem;
+    }
+</style>
+</head>
+<body>
+   <div class="Form-container">
+    <h2>Login</h2>
+    <input type="email" id="loginEmail" placeholder="Email"/>
+    <input type="password" id="loginPassword" placeholder="Password"/>
+    <span id="loginError" style="color: red;"></span>
+    <button id="loginButton">Login</button>
+    <p>Don't have an account? <a href="Signup.html">Sign up</a></p>
+   </div>
+   <script src="Login.js"></script>
+</body>
+</html>

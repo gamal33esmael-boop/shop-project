@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .Form-container {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 1.5rem;
+            width: 370px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .Form-container h2 {
+            font-size: 1.8rem;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+
+        .Form-container input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            outline: none;
+            background: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+
+        .Form-container input:focus {
+            border-color: #f5c542;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(245,197,66,0.2);
+        }
+
+        .Form-container button {
+            width: 100%;
+            padding: 0.8rem;
+            background: linear-gradient(135deg, #f5c542, #e6b422);
+            color: #1a1a2e;
+            border: none;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 8px;
+        }
+
+        .Form-container button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(245,197,66,0.4);
+        }
+
+        .Form-container a { color: #f5c542; text-decoration: none; }
+        .Form-container p { font-size: 0.9rem; color: #666; text-align: center; }
+
+        span[id$="Error"] {
+            color: red;
+            font-size: 0.8rem;
+            min-height: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="Form-container">
+     <h2>Signup</h2>
+     <input type="text" id="signupName" placeholder="Name"/>
+<span id="nameError" style="color: red;"></span>
+
+<input type="number" id="signupAge" placeholder="Age"/>
+<span id="ageError" style="color: red;"></span>
+
+<input type="email" id="signupEmail" placeholder="Email"/>
+<span id="emailError" style="color: red;"></span>
+
+<input type="password" id="signupPassword" placeholder="Password"/>
+<span id="passError" style="color: red;"></span>
+
+<button id="signupButton">Signup</button>
+<p>Already have an account? <a href="Login.html">Login</a></p>
+
+</div>
+<script src="Signup.js"></script>
+</body>
+</html>
