@@ -55,7 +55,7 @@ btn.addEventListener("click", function(e) {
         document.body.appendChild(successMsg);
 
         setTimeout(function() {
-            location.href = "login.html";
+            location.href = "Login.html";
         }, 2000);
     }
 });
